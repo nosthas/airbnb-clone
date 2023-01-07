@@ -64,11 +64,11 @@ import Footer from '../components/Footer';
 
 export async function getStaticProps(){
   // Explore Data
-  const exploreData = await fetch('https://www.jsonkeeper.com/b/4G1G')
+  const exploreData: any = await fetch('https://www.jsonkeeper.com/b/4G1G')
   .then((res) => res.json());
 
   // Live Data
-  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT')
+  const cardsData: any = await fetch('https://www.jsonkeeper.com/b/VHHT')
   .then((res) => res.json());
 
   return {
