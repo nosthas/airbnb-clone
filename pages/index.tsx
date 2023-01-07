@@ -19,7 +19,6 @@ interface CardData {
   title: string;
 } 
 
-// @ts-ignore
  const Home: NextPage = ({exploreData, cardsData}) => {
   return (
     <div className="">
@@ -53,7 +52,7 @@ interface CardData {
             <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
 
             <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            // @ts-ignore
+           
             {cardsData?.map(({img, title})=>(
               <MediumCard key={img} img={img} title={title}/>
             ))}
