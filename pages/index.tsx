@@ -8,7 +8,18 @@ import MediumCard from '../components/MediumCard';
 import LargeCard from '../components/LargeCard';
 import Footer from '../components/Footer';
 
+interface ExploreData {
+  img: string;
+  location: string;
+  distance: string;
+} 
 
+interface CardData {
+  img: string;
+  title: string;
+} 
+
+// @ts-ignore
  const Home: NextPage = ({exploreData, cardsData}) => {
   return (
     <div className="">
@@ -64,11 +75,11 @@ import Footer from '../components/Footer';
 
 export async function getStaticProps(){
   // Explore Data
-  const exploreData: any = await fetch('https://www.jsonkeeper.com/b/4G1G')
+  const exploreData: ExploreData = await fetch('https://www.jsonkeeper.com/b/4G1G')
   .then((res) => res.json());
 
   // Live Data
-  const cardsData: any = await fetch('https://www.jsonkeeper.com/b/VHHT')
+  const cardsData: CardData = await fetch('https://www.jsonkeeper.com/b/VHHT')
   .then((res) => res.json());
 
   return {
