@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import  { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Header from '../components/Header';
@@ -73,7 +73,8 @@ interface CardData {
   )
 }
 
-export async function getStaticProps(){
+ export async function getStaticProps() {
+
   // Explore Data
   const exploreData: ExploreData = await fetch('https://www.jsonkeeper.com/b/4G1G')
   .then((res) => res.json());
