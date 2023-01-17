@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 
@@ -14,7 +15,7 @@ function Search({ searchResults }) {
   return (
     <div className='h-screen'>
       <Header placeholder={`${location} | ${range} | ${noOfGuests} guests`} />
-      <main>
+      <main className="flex">
         <section className='flex-grow pt-14 px-6'>
           <p className='text-xs'>
             300+ Stays - {range} - for {noOfGuests} guests
@@ -45,7 +46,13 @@ function Search({ searchResults }) {
             ))}
           </div>
         </section>
+
+        {/* Map Section */}
+        <section className=" hidden sm:inline-flex min-w-[600px]">
+          <Map />
+        </section>
       </main>
+
       <Footer />
     </div>
   );
