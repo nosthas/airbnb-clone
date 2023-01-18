@@ -49,7 +49,7 @@ function Search({ searchResults }) {
 
         {/* Map Section */}
         <section className=" hidden sm:inline-flex min-w-[600px]">
-          <Map />
+          <Map searchResults={searchResults} />
         </section>
       </main>
 
